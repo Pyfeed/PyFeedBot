@@ -20,11 +20,11 @@ class Info(commands.Cog):
             
          @commands.command()
         async def Uptime(self, ctx):
-        delta_uptime = datetime.utcnow() - self.bot.launch_time
-        hours, remainder = divmod(int(delta_uptime.total_seconds()), 3600)
-        minutes, seconds = divmod(remainder, 60)
-        days, hours = divmod(hours, 24)
-        await ctx.send(f"{days}d, {hours}h, {minutes}m, {seconds}s")
+            delta_uptime = datetime.utcnow() - self.bot.launch_time
+            hours, remainder = divmod(int(delta_uptime.total_seconds()), 3600)
+            minutes, seconds = divmod(remainder, 60)
+            days, hours = divmod(hours, 24)
+            await ctx.send(f"{days}d, {hours}h, {minutes}m, {seconds}s")
 
         @commands.group(invoke_without_command=True, name='About', description='About PyFeed Bot', case_insensitive=True)
         async def about_command(self, ctx):
