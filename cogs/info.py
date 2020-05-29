@@ -18,7 +18,7 @@ class Info(commands.Cog):
             duration = (end - start) * 1000
             await message.edit(content='Pong! {:.2f}ms'.format(duration))
             
-         @commands.command()
+        @commands.command()
         async def Uptime(self, ctx):
             delta_uptime = datetime.utcnow() - self.bot.launch_time
             hours, remainder = divmod(int(delta_uptime.total_seconds()), 3600)
