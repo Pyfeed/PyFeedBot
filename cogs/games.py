@@ -110,6 +110,7 @@ class Games(commands.Cog, name='Games'):
 
     @hangman.command(name='create', aliases=['start'])
     @commands.guild_only()
+    @commands.cooldown(1, 30, BucketType.guild)
     async def create_hangman(self, ctx):
         """This is used to create a new hangman game"""
 
@@ -163,6 +164,7 @@ class Games(commands.Cog, name='Games'):
 
     @hangman.command(name='delete', aliases=['stop', 'remove', 'end'])
     @commands.guild_only()
+    @commands.cooldown(1, 30, BucketType.guild)
     @commands.has_permissions(manage_messages=True)
     async def stop_hangman(self, ctx):
         """Force stops a game of hangman"""
