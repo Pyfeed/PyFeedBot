@@ -1,2 +1,2 @@
 # PyFeedBot
-[Discord](https://discord.gg/VDBBgqA)
+[Discord Server](https://discord.gg/VDBBgqA)
