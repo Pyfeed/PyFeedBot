@@ -16,7 +16,7 @@ bot.load_extension("jishaku")
 bot.launch_time = datetime.datetime.utcnow()
 
 cogs = []
-system_extensions = []
+system_extensions = ['system_extensions.error_handler']
 
 
 @bot.event
