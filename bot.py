@@ -15,7 +15,7 @@ os.environ["JISHAKU_HIDE"] = "True"
 bot.load_extension("jishaku")
 bot.launch_time = datetime.datetime.utcnow()
 
-cogs = []
+cogs = ['cogs.games']
 system_extensions = ['system_extensions.error_handler']
 
 
