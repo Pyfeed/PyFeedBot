@@ -41,7 +41,7 @@ class error_handler(commands.Cog):
             await asyncio.sleep(error.retry_after)
             await msg.delete(delay=3)
         else:
-            #un handled
+            #Not handled
             await ctx.send(f"Playing with errors: \n \n ```\n{error}``` \n \n Type: {type(error)}")
             
 def setup(bot):
