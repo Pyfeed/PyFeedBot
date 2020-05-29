@@ -29,8 +29,7 @@ class Info(commands.Cog):
         @commands.group(invoke_without_command=True, name='About', description='About PyFeed Bot', case_insensitive=True)
         async def about_command(self, ctx):
             embed = discord.Embed(title='PyFeed Bot', description=f'{self.bot.user.mention}')
-            embed.add_field(name='**About**',
-                            value=f'To be added to')
+            embed.add_field(name='**About**', value=f'To be added to')
             await ctx.send(embed=embed)
 
 def setup(bot):
