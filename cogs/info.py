@@ -10,7 +10,7 @@ class Info(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-        @bot.command()
+        @commands.command()
         async def ping(self, ctx):
             start = time.perf_counter()
             message = await ctx.send("Ping...")
