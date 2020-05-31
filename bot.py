@@ -20,6 +20,14 @@ class PyFeed(commands.Bot):
                     self.logger.info(f"Extension {ext[:-3]} loaded!")
                 except Exception as e:
                     self.logger.critical(f"Extension {ext[:-3]} could not be loaded because:\n{e}")
+                    
+        for ext in os.listdir('./system_extensions'):
+            if ext.endswith(".py"):
+                try:
+                    self.load_extension(f"system_extensions.{ext[:-3]}")
+                    self.logger.info(f"Extension {ext[:-3]} loaded!")
+                except Exception as e:
+                    self.logger.critical(f"Extension {ext[:-3]} could not be loaded because:\n{e}")
 
     async def on_ready(self):
         self.logger.info("Bot is Started!")
